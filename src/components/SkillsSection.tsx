@@ -4,31 +4,35 @@ const skillCategories = [
   {
     title: "Frontend",
     skills: [
-      { name: "React", level: 95 },
-      { name: "TypeScript", level: 90 },
-      { name: "Next.js", level: 88 },
-      { name: "Tailwind CSS", level: 92 },
-      { name: "Framer Motion", level: 85 },
+      { name: "React.js", level: 95 },
+      { name: "Typescript", level: 95 },
     ],
   },
   {
     title: "Backend",
     skills: [
-      { name: "Node.js", level: 90 },
-      { name: "Python", level: 85 },
-      { name: "PostgreSQL", level: 88 },
-      { name: "MongoDB", level: 82 },
-      { name: "GraphQL", level: 80 },
+      { name: "Node.js", level: 95 },
+      { name: "Express.js", level: 95 },
+      { name: "Laravel", level: 90 },
+      { name: "Microservices", level: 90 },
+      { name: "gRPC", level: 90 },
+    ],
+  },
+  {
+    title: "Database",
+    skills: [
+      { name: "PostgreSQL", level: 95 },
+      { name: "Transact-SQL", level: 95 },
+      { name: "Oracle Database", level: 90 },
+      { name: "MongoDB", level: 85 },
     ],
   },
   {
     title: "DevOps & Tools",
     skills: [
-      { name: "AWS", level: 85 },
-      { name: "Docker", level: 88 },
       { name: "Git", level: 95 },
-      { name: "CI/CD", level: 82 },
-      { name: "Kubernetes", level: 75 },
+      { name: "Docker", level: 90 },
+      { name: "Google Cloud", level: 75 },
     ],
   },
 ]

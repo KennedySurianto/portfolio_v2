@@ -64,15 +64,17 @@ export default function HeroSection() {
 
           <div className="flex items-center space-x-4">
             {[
-              { icon: Github, href: "#", label: "GitHub" },
-              { icon: Linkedin, href: "#", label: "LinkedIn" },
-              { icon: Mail, href: "#", label: "Email" },
+              { icon: Github, href: "https://github.com/KennedySurianto", label: "GitHub" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/kennedy-surianto/", label: "LinkedIn" },
+              { icon: Mail, href: "mailto:kennedysrnt@gmail.com", label: "Email" },
             ].map((social, index) => {
               const Icon = social.icon
               return (
                 <motion.a
                   key={social.label}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 1.4 + index * 0.1 }}

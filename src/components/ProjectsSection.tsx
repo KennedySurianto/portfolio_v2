@@ -3,42 +3,30 @@ import { ExternalLink, Github, Code, Database, Globe } from "lucide-react"
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description:
-      "A full-stack e-commerce solution with real-time inventory management, payment processing, and advanced analytics dashboard.",
-    image: "/placeholder.svg?height=300&width=500",
-    technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
-    github: "#",
-    live: "#",
-    featured: true,
+    "title": "SurVace: Video Streaming Platform",
+    "description":
+      "A scalable TikTok clone built on a Go-based microservices architecture. Features include video uploading and scrolling, real-time messaging, and live streaming capabilities (screen, camera, and audio).",
+    "image": "/placeholder.svg?height=300&width=500",
+    "technologies": [
+      "Go",
+      "React",
+      "gRPC-Web",
+      "Envoy Proxy",
+      "Docker"
+    ],
+    "github": "#",
+    "live": "#",
+    "featured": true
   },
   {
-    title: "AI-Powered Analytics Dashboard",
-    description:
-      "Machine learning dashboard for business intelligence with predictive analytics and real-time data visualization.",
-    image: "/placeholder.svg?height=300&width=500",
-    technologies: ["Next.js", "Python", "TensorFlow", "D3.js", "MongoDB"],
-    github: "#",
-    live: "#",
-    featured: true,
-  },
-  {
-    title: "Real-time Collaboration Tool",
-    description: "A collaborative workspace with real-time editing, video calls, and project management features.",
-    image: "/placeholder.svg?height=300&width=500",
-    technologies: ["React", "Socket.io", "WebRTC", "Redis", "Docker"],
-    github: "#",
-    live: "#",
-    featured: false,
-  },
-  {
-    title: "Blockchain Voting System",
-    description: "Secure and transparent voting platform built on blockchain technology with smart contracts.",
-    image: "/placeholder.svg?height=300&width=500",
-    technologies: ["Solidity", "Web3.js", "React", "Ethereum", "IPFS"],
-    github: "#",
-    live: "#",
-    featured: false,
+    "title": "Kenvo: Real-Time Messaging Platform",
+    "description":
+      "A real-time messaging application enabling users to engage in direct one-on-one conversations and group chats with instant message delivery.",
+    "image": "/placeholder.svg?height=300&width=500",
+    "technologies": ["Node.js", "Express.js", "Socket.IO", "EJS"],
+    "github": "#",
+    "live": "#",
+    "featured": true
   },
 ]
 

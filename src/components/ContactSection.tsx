@@ -1,7 +1,7 @@
 import type React from "react"
 
 import { motion } from "framer-motion"
-import { Mail, Phone, MapPin, Send } from "lucide-react"
+import { Mail, MapPin, MessageCircle, Send } from "lucide-react"
 import { useState } from "react"
 
 export default function ContactSection() {
@@ -61,9 +61,9 @@ export default function ContactSection() {
 
               <div className="space-y-6">
                 {[
-                  { icon: Mail, label: "Email", value: "kennedy@example.com" },
-                  { icon: Phone, label: "Phone", value: "+1 (555) 123-4567" },
-                  { icon: MapPin, label: "Location", value: "San Francisco, CA" },
+                  { icon: Mail, label: "Email", value: "kennedysrnt@gmail.com" },
+                  { icon: MessageCircle, label: "LINE", value: "kennedy3000" },
+                  { icon: MapPin, label: "Location", value: "Tangerang, Banten" },
                 ].map((contact, index) => {
                   const Icon = contact.icon
                   return (

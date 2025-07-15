@@ -2,10 +2,10 @@ import { motion } from "framer-motion"
 import { Code, Coffee, Lightbulb, Rocket } from "lucide-react"
 
 const stats = [
-  { icon: Code, label: "Projects Completed", value: "50+" },
-  { icon: Coffee, label: "Cups of Coffee", value: "1000+" },
-  { icon: Lightbulb, label: "Ideas Implemented", value: "200+" },
-  { icon: Rocket, label: "Years Experience", value: "5+" },
+  { icon: Code, label: "Projects Completed", value: "20+" },
+  { icon: Lightbulb, label: "Ideas Implemented", value: "100+" },
+  { icon: Rocket, label: "Years Experience", value: "2+" },
+  { icon: Coffee, label: "Cups of Coffee", value: "2000+" },
 ]
 
 export default function AboutSection() {
@@ -36,18 +36,13 @@ export default function AboutSection() {
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-transparent rounded-2xl blur-xl"></div>
               <div className="relative bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
                 <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                  I'm a passionate full-stack developer with over 5 years of experience creating innovative web
-                  applications. My journey began with a curiosity for how things work on the web, and it has evolved
-                  into a deep expertise in modern technologies.
+                  I'm a <strong>full-stack developer</strong> who builds complete web applications, from interactive UIs to scalable backend systems. I have strong experience <strong>architecting APIs</strong>, <strong>designing microservices</strong>, and managing both relational and NoSQL databases.
                 </p>
                 <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                  I specialize in React, Node.js, and cloud technologies, with a strong focus on performance
-                  optimization and user experience. I believe in writing clean, maintainable code and staying up-to-date
-                  with the latest industry trends.
+                  I manage the <strong>entire development lifecycle</strong>, using <strong>containerization</strong> and <strong>cloud deployment</strong> to deliver high-quality, maintainable code. My focus is on creating <em>efficient and user-friendly solutions</em>.
                 </p>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  When I'm not coding, you can find me exploring new technologies, contributing to open-source projects,
-                  or sharing knowledge with the developer community.
+                  When I'm not building for the web, I channel my passion for technology into creating immersive games using <strong>Unity</strong> and <strong>Unreal Engine</strong>.
                 </p>
               </div>
             </div>
