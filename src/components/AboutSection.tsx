@@ -1,5 +1,3 @@
-"use client"
-
 import { motion } from "framer-motion"
 import { Code, Coffee, Lightbulb, Rocket } from "lucide-react"
 

@@ -6,7 +6,7 @@ export const useSmoothScroll = () => {
   useEffect(() => {
     const lenis = new Lenis({
       // The lerp property overrides duration and easing
-      lerp: 0.001, // A good starting point. Lower is more "slippery".
+      lerp: 0.1, // A good starting point. Lower is more "slippery".
       touchMultiplier: 2,
       infinite: false,
     });
