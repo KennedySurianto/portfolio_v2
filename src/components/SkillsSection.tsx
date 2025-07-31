@@ -2,20 +2,12 @@ import { motion } from "framer-motion"
 
 const skillCategories = [
   {
-    title: "Frontend",
+    title: "Frontend & Backend",
     skills: [
-      { name: "React.js", level: 95 },
-      { name: "Typescript", level: 95 },
-    ],
-  },
-  {
-    title: "Backend",
-    skills: [
-      { name: "Node.js", level: 95 },
-      { name: "Express.js", level: 95 },
+      { name: "React", level: 95 },
+      { name: "Express", level: 95 },
       { name: "Laravel", level: 90 },
-      { name: "Microservices", level: 90 },
-      { name: "gRPC", level: 90 },
+      { name: "Go", level: 90 },
     ],
   },
   {

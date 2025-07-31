@@ -1,12 +1,14 @@
 import { motion } from "framer-motion"
 import { ExternalLink, Github, Code, Database, Globe } from "lucide-react"
+import survaceImage from "../assets/survace.png"
+import kenvoImage from "../assets/kenvo.png"
 
 const projects = [
   {
     "title": "SurVace: Video Streaming Platform",
     "description":
       "A scalable TikTok clone built on a Go-based microservices architecture. Features include video uploading and scrolling, real-time messaging, and live streaming capabilities (screen, camera, and audio).",
-    "image": "/placeholder.svg?height=300&width=500",
+    "image": survaceImage,
     "technologies": [
       "Go",
       "React",
@@ -22,7 +24,7 @@ const projects = [
     "title": "Kenvo: Real-Time Messaging Platform",
     "description":
       "A real-time messaging application enabling users to engage in direct one-on-one conversations and group chats with instant message delivery.",
-    "image": "/placeholder.svg?height=300&width=500",
+    "image": kenvoImage,
     "technologies": ["Node.js", "Express.js", "Socket.IO", "EJS"],
     "github": "#",
     "live": "#",
@@ -66,7 +68,7 @@ export default function ProjectsSection() {
                 <img
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60"></div>
 
