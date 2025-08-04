@@ -2,9 +2,14 @@ import { motion } from "framer-motion"
 
 const skillCategories = [
   {
-    title: "Frontend & Backend",
+    title: "Frontend",
     skills: [
       { name: "React", level: 95 },
+    ],
+  },
+  {
+    title: "Backend",
+    skills: [
       { name: "Express", level: 95 },
       { name: "Laravel", level: 90 },
       { name: "Go", level: 90 },
@@ -19,15 +24,7 @@ const skillCategories = [
       { name: "MongoDB", level: 85 },
     ],
   },
-  {
-    title: "DevOps & Tools",
-    skills: [
-      { name: "Git", level: 95 },
-      { name: "Docker", level: 90 },
-      { name: "Google Cloud", level: 75 },
-    ],
-  },
-]
+];
 
 export default function SkillsSection() {
   return (
@@ -40,7 +37,7 @@ export default function SkillsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-orange-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-orange-500 bg-clip-text text-transparent leading-tight">
             Skills & Expertise
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-orange-600 mx-auto mb-8"></div>
@@ -59,7 +56,9 @@ export default function SkillsSection() {
               viewport={{ once: true }}
               className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-orange-500/50 transition-all duration-300"
             >
-              <h3 className="text-2xl font-bold text-white mb-6 text-center">{category.title}</h3>
+              <h3 className="text-2xl font-bold text-white mb-6 text-center">
+                {category.title}
+              </h3>
 
               <div className="space-y-6">
                 {category.skills.map((skill, skillIndex) => (
@@ -67,19 +66,29 @@ export default function SkillsSection() {
                     key={skill.name}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: categoryIndex * 0.2 + skillIndex * 0.1 }}
+                    transition={{
+                      duration: 0.6,
+                      delay: categoryIndex * 0.2 + skillIndex * 0.1,
+                    }}
                     viewport={{ once: true }}
                   >
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-300 font-medium">{skill.name}</span>
-                      <span className="text-orange-500 text-sm font-semibold">{skill.level}%</span>
+                      <span className="text-gray-300 font-medium">
+                        {skill.name}
+                      </span>
+                      <span className="text-orange-500 text-sm font-semibold">
+                        {skill.level}%
+                      </span>
                     </div>
 
                     <div className="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.level}%` }}
-                        transition={{ duration: 1, delay: categoryIndex * 0.2 + skillIndex * 0.1 + 0.3 }}
+                        transition={{
+                          duration: 1,
+                          delay: categoryIndex * 0.2 + skillIndex * 0.1 + 0.3,
+                        }}
                         viewport={{ once: true }}
                         className="h-full bg-gradient-to-r from-orange-500 to-orange-600 rounded-full relative"
                       >
@@ -94,5 +103,5 @@ export default function SkillsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

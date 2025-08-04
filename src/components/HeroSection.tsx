@@ -7,7 +7,10 @@ export default function HeroSection() {
   }
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative px-6">
+    <section
+      id="hero"
+      className="min-h-screen flex items-center justify-center relative px-6"
+    >
       <div className="max-w-4xl mx-auto text-center z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -16,7 +19,7 @@ export default function HeroSection() {
           className="mb-8"
         >
           <motion.h1
-            className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-orange-200 to-orange-500 bg-clip-text text-transparent"
+            className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-orange-200 to-orange-500 bg-clip-text text-transparent leading-tight"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
@@ -41,8 +44,9 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 1 }}
             className="text-lg text-gray-400 max-w-2xl mx-auto mb-8"
           >
-            Crafting exceptional digital experiences with cutting-edge technologies. Passionate about clean code,
-            innovative solutions, and pushing the boundaries of web development.
+            Crafting exceptional digital experiences with cutting-edge
+            technologies. Passionate about clean code, innovative solutions, and
+            pushing the boundaries of web development.
           </motion.p>
         </motion.div>
 
@@ -53,7 +57,10 @@ export default function HeroSection() {
           className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12"
         >
           <motion.button
-            whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(249, 115, 22, 0.3)" }}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0 10px 30px rgba(249, 115, 22, 0.3)",
+            }}
             whileTap={{ scale: 0.95 }}
             className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 flex items-center space-x-2"
             data-cursor-hover
@@ -64,11 +71,23 @@ export default function HeroSection() {
 
           <div className="flex items-center space-x-4">
             {[
-              { icon: Github, href: "https://github.com/KennedySurianto", label: "GitHub" },
-              { icon: Linkedin, href: "https://www.linkedin.com/in/kennedy-surianto/", label: "LinkedIn" },
-              { icon: Mail, href: "mailto:kennedysrnt@gmail.com", label: "Email" },
+              {
+                icon: Github,
+                href: "https://github.com/KennedySurianto",
+                label: "GitHub",
+              },
+              {
+                icon: Linkedin,
+                href: "https://www.linkedin.com/in/kennedy-surianto/",
+                label: "LinkedIn",
+              },
+              {
+                icon: Mail,
+                href: "mailto:kennedysrnt@gmail.com",
+                label: "Email",
+              },
             ].map((social, index) => {
-              const Icon = social.icon
+              const Icon = social.icon;
               return (
                 <motion.a
                   key={social.label}
@@ -84,7 +103,7 @@ export default function HeroSection() {
                 >
                   <Icon className="w-6 h-6 text-gray-400 hover:text-orange-500 transition-colors" />
                 </motion.a>
-              )
+              );
             })}
           </div>
         </motion.div>
@@ -98,11 +117,14 @@ export default function HeroSection() {
           whileHover={{ y: -5 }}
           data-cursor-hover
         >
-          <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}>
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
+          >
             <ChevronDown className="w-8 h-8" />
           </motion.div>
         </motion.button>
       </div>
     </section>
-  )
+  );
 }

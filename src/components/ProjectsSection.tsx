@@ -1,36 +1,56 @@
 import { motion } from "framer-motion"
-import { ExternalLink, Github, Code, Database, Globe } from "lucide-react"
+import { ExternalLink, Github, Globe, Gamepad2 } from "lucide-react"
 import survaceImage from "../assets/survace.png"
 import kenvoImage from "../assets/kenvo.png"
+import moonriseImage from "../assets/moonrise.png"
+import missionTimpossibleImage from "../assets/mission-timpossible.png"
 
 const projects = [
   {
-    "title": "SurVace: Video Streaming Platform",
-    "description":
+    title: "SurVace: Video Streaming Platform",
+    description:
       "A scalable TikTok clone built on a Go-based microservices architecture. Features include video uploading and scrolling, real-time messaging, and live streaming capabilities (screen, camera, and audio).",
-    "image": survaceImage,
-    "technologies": [
-      "Go",
-      "React",
-      "gRPC-Web",
-      "Envoy Proxy",
-      "Docker"
-    ],
-    "github": "#",
-    "live": "#",
-    "featured": true
+    image: survaceImage,
+    technologies: ["Go", "React", "gRPC-Web", "Envoy Proxy", "Docker"],
+    github: "#",
+    live: "#",
+    featured: true,
+    categories: [{ name: "Full Stack", icon: Globe }],
   },
   {
-    "title": "Kenvo: Real-Time Messaging Platform",
-    "description":
+    title: "Kenvo: Real-Time Messaging Platform",
+    description:
       "A real-time messaging application enabling users to engage in direct one-on-one conversations and group chats with instant message delivery.",
-    "image": kenvoImage,
-    "technologies": ["Node.js", "Express.js", "Socket.IO", "EJS"],
-    "github": "#",
-    "live": "#",
-    "featured": true
+    image: kenvoImage,
+    technologies: ["Node.js", "Express.js", "Socket.IO", "EJS"],
+    github: "#",
+    live: "#",
+    featured: true,
+    categories: [{ name: "Full Stack", icon: Globe }],
   },
-]
+  {
+    title: "Moonrise: Third-Person Survival Game",
+    description:
+      "A third-person survival game that integrates resource gathering, farming, and combat mechanics.",
+    image: moonriseImage,
+    technologies: ["Unity", "C#"],
+    github: "#",
+    live: "#",
+    featured: true,
+    categories: [{ name: "Game Dev", icon: Gamepad2 }],
+  },
+  {
+    title: "Mission Timpossible: Third-Person Shooter Game",
+    description:
+      "An action-packed third-person shooter that challenges players to navigate hostile environments, engage in tactical cover-based combat, and complete a series of high-stakes objectives.",
+    image: missionTimpossibleImage,
+    technologies: ["Unreal Engine", "C++"],
+    github: "#",
+    live: "#",
+    featured: true,
+    categories: [{ name: "Game Dev", icon: Gamepad2 }],
+  },
+];
 
 export default function ProjectsSection() {
   return (
@@ -43,7 +63,7 @@ export default function ProjectsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-orange-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-orange-500 bg-clip-text text-transparent leading-tight">
             Featured Projects
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-orange-600 mx-auto mb-8"></div>
@@ -97,7 +117,9 @@ export default function ProjectsSection() {
                   {project.title}
                 </h3>
 
-                <p className="text-gray-400 mb-4 leading-relaxed">{project.description}</p>
+                <p className="text-gray-400 mb-4 leading-relaxed">
+                  {project.description}
+                </p>
 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
@@ -112,18 +134,15 @@ export default function ProjectsSection() {
 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-4 text-sm text-gray-500">
-                    <div className="flex items-center space-x-1">
-                      <Code className="w-4 h-4" />
-                      <span>Frontend</span>
-                    </div>
-                    <div className="flex items-center space-x-1">
-                      <Database className="w-4 h-4" />
-                      <span>Backend</span>
-                    </div>
-                    <div className="flex items-center space-x-1">
-                      <Globe className="w-4 h-4" />
-                      <span>Full Stack</span>
-                    </div>
+                    {project.categories.map((category) => (
+                      <div
+                        key={category.name}
+                        className="flex items-center space-x-1"
+                      >
+                        <category.icon className="w-4 h-4" />
+                        <span>{category.name}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -132,5 +151,5 @@ export default function ProjectsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

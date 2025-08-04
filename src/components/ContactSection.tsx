@@ -34,7 +34,7 @@ export default function ContactSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-orange-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-orange-500 bg-clip-text text-transparent leading-tight">
             Let's Work Together
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-orange-600 mx-auto mb-8"></div>
@@ -52,20 +52,31 @@ export default function ContactSection() {
           >
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
+                <h3 className="text-2xl font-bold text-white mb-6">
+                  Get in Touch
+                </h3>
                 <p className="text-gray-400 leading-relaxed mb-8">
-                  I'm always interested in new opportunities and exciting projects. Whether you have a question or just
-                  want to say hi, I'll try my best to get back to you!
+                  I'm always interested in new opportunities and exciting
+                  projects. Whether you have a question or just want to say hi,
+                  I'll try my best to get back to you!
                 </p>
               </div>
 
               <div className="space-y-6">
                 {[
-                  { icon: Mail, label: "Email", value: "kennedysrnt@gmail.com" },
+                  {
+                    icon: Mail,
+                    label: "Email",
+                    value: "kennedysrnt@gmail.com",
+                  },
                   { icon: MessageCircle, label: "LINE", value: "kennedy3000" },
-                  { icon: MapPin, label: "Location", value: "Tangerang, Banten" },
+                  {
+                    icon: MapPin,
+                    label: "Location",
+                    value: "Tangerang, Banten",
+                  },
                 ].map((contact, index) => {
-                  const Icon = contact.icon
+                  const Icon = contact.icon;
                   return (
                     <motion.div
                       key={contact.label}
@@ -79,11 +90,15 @@ export default function ContactSection() {
                         <Icon className="w-6 h-6 text-orange-500" />
                       </div>
                       <div>
-                        <div className="text-sm text-gray-400">{contact.label}</div>
-                        <div className="text-white font-medium">{contact.value}</div>
+                        <div className="text-sm text-gray-400">
+                          {contact.label}
+                        </div>
+                        <div className="text-white font-medium">
+                          {contact.value}
+                        </div>
                       </div>
                     </motion.div>
-                  )
+                  );
                 })}
               </div>
             </div>
@@ -97,7 +112,10 @@ export default function ContactSection() {
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-300 mb-2"
+                >
                   Name
                 </label>
                 <input
@@ -113,7 +131,10 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-300 mb-2"
+                >
                   Email
                 </label>
                 <input
@@ -129,7 +150,10 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-300 mb-2"
+                >
                   Message
                 </label>
                 <textarea
@@ -146,7 +170,10 @@ export default function ContactSection() {
 
               <motion.button
                 type="submit"
-                whileHover={{ scale: 1.02, boxShadow: "0 10px 30px rgba(249, 115, 22, 0.3)" }}
+                whileHover={{
+                  scale: 1.02,
+                  boxShadow: "0 10px 30px rgba(249, 115, 22, 0.3)",
+                }}
                 whileTap={{ scale: 0.98 }}
                 className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center space-x-2"
                 data-cursor-hover
@@ -165,9 +192,12 @@ export default function ContactSection() {
           viewport={{ once: true }}
           className="text-center mt-16 pt-8 border-t border-gray-700/50"
         >
-          <p className="text-gray-400">© 2024 Kennedy Surianto. Built with React, TypeScript, and lots of ☕</p>
+          <p className="text-gray-400">
+            © 2024 Kennedy Surianto. Built with React, TypeScript, and lots of
+            ☕
+          </p>
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

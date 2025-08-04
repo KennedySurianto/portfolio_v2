@@ -19,7 +19,7 @@ export default function AboutSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-orange-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-orange-500 bg-clip-text text-transparent leading-tight">
             About Me
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-orange-600 mx-auto mb-8"></div>
@@ -36,13 +36,24 @@ export default function AboutSection() {
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-transparent rounded-2xl blur-xl"></div>
               <div className="relative bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
                 <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                  I'm a <strong>full-stack developer</strong> who builds complete web applications, from interactive UIs to scalable backend systems. I have strong experience <strong>architecting APIs</strong>, <strong>designing microservices</strong>, and managing both relational and NoSQL databases.
+                  I'm a <strong>full-stack developer</strong> who builds
+                  complete web applications, from interactive UIs to scalable
+                  backend systems. I have strong experience{" "}
+                  <strong>architecting APIs</strong>,{" "}
+                  <strong>designing microservices</strong>, and managing both
+                  relational and NoSQL databases.
                 </p>
                 <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                  I manage the <strong>entire development lifecycle</strong>, using <strong>containerization</strong> and <strong>cloud deployment</strong> to deliver high-quality, maintainable code. My focus is on creating <em>efficient and user-friendly solutions</em>.
+                  I manage the <strong>entire development lifecycle</strong>,
+                  using <strong>containerization</strong> and{" "}
+                  <strong>cloud deployment</strong> to deliver high-quality,
+                  maintainable code. My focus is on creating{" "}
+                  <em>efficient and user-friendly solutions</em>.
                 </p>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  When I'm not building for the web, I channel my passion for technology into creating immersive games using <strong>Unity</strong> and <strong>Unreal Engine</strong>.
+                  When I'm not building for the web, I channel my passion for
+                  technology into creating immersive games using{" "}
+                  <strong>Unity</strong> and <strong>Unreal Engine</strong>.
                 </p>
               </div>
             </div>
@@ -56,7 +67,7 @@ export default function AboutSection() {
             className="grid grid-cols-2 gap-6"
           >
             {stats.map((stat, index) => {
-              const Icon = stat.icon
+              const Icon = stat.icon;
               return (
                 <motion.div
                   key={stat.label}
@@ -72,14 +83,16 @@ export default function AboutSection() {
                       <Icon className="w-8 h-8 text-orange-500" />
                     </div>
                   </div>
-                  <div className="text-2xl font-bold text-white mb-2">{stat.value}</div>
+                  <div className="text-2xl font-bold text-white mb-2">
+                    {stat.value}
+                  </div>
                   <div className="text-sm text-gray-400">{stat.label}</div>
                 </motion.div>
-              )
+              );
             })}
           </motion.div>
         </div>
       </div>
     </section>
-  )
+  );
 }
