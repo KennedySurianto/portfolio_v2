@@ -1,7 +1,7 @@
 import type React from "react"
 
 import { motion } from "framer-motion"
-import { Mail, MapPin, MessageCircle, Send } from "lucide-react"
+import { Mail, MapPin, Send } from "lucide-react"
 import { useState } from "react"
 
 export default function ContactSection() {
@@ -15,6 +15,28 @@ export default function ContactSection() {
     e.preventDefault()
     // Handle form submission
     console.log("Form submitted:", formData)
+
+    const recipientEmail = "kennedysrnt@gmail.com"
+    
+    // Create a subject line
+    const subject = `New Message from ${formData.name}`
+
+    // Create the body content, including details from the form
+    const body = `
+      Name: ${formData.name}
+      Email: ${formData.email}
+
+      Message:
+      ${formData.message}
+    `
+
+    // Use encodeURIComponent to ensure spaces and special characters are handled correctly
+    const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`
+
+    // Open the user's email client
+    window.location.href = mailtoLink
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -69,7 +91,6 @@ export default function ContactSection() {
                     label: "Email",
                     value: "kennedysrnt@gmail.com",
                   },
-                  { icon: MessageCircle, label: "LINE", value: "kennedy3000" },
                   {
                     icon: MapPin,
                     label: "Location",
@@ -162,7 +183,7 @@ export default function ContactSection() {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  rows={6}
+                  rows={4}
                   className="w-full px-4 py-3 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-orange-500/50 focus:ring-1 focus:ring-orange-500/50 transition-all resize-none"
                   placeholder="Tell me about your project..."
                 />
@@ -193,7 +214,7 @@ export default function ContactSection() {
           className="text-center mt-16 pt-8 border-t border-gray-700/50"
         >
           <p className="text-gray-400">
-            © 2024 Kennedy Surianto. Built with React, TypeScript, and lots of
+            © 2025 Kennedy Surianto. Built with React, TypeScript, and lots of
             ☕
           </p>
         </motion.div>
