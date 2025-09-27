@@ -56,7 +56,9 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 1.2 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12"
         >
-          <motion.button
+          <motion.a
+            href="/CV_KennedySurianto.pdf"
+            target="_blank"
             whileHover={{
               scale: 1.05,
               boxShadow: "0 10px 30px rgba(249, 115, 22, 0.3)",
@@ -67,7 +69,7 @@ export default function HeroSection() {
           >
             <Download className="w-5 h-5" />
             <span>Download Resume</span>
-          </motion.button>
+          </motion.a>
 
           <div className="flex items-center space-x-4">
             {[
